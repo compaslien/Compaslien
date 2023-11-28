@@ -25,7 +25,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #000;
+  background: #ffffff;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -47,7 +47,6 @@ section {
 .heading {
   text-align: center;
   margin-bottom: 3rem;
-  justify-content: center;
 }
 
 .heading h3 {
@@ -104,7 +103,7 @@ section {
 }
 
 .header #menu-btn {
-  display: flex;
+  display: none;
 }
 
 .header .navbar a {
@@ -175,7 +174,7 @@ section {
 
 .home {
   margin-top: 7rem;
-  background: no-repeat;
+  background: url(../images/home-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -190,19 +189,6 @@ section {
   width: 100%;
 }
 
-.div {
-  border: solid 3px;
-  padding: 1em;
-  max-width: 75%;
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 8em;
-}
-
-
 .home .content h3 {
   font-size: 4rem;
   text-transform: uppercase;
@@ -212,25 +198,20 @@ section {
 .home .content p {
   font-size: 1.7rem;
   line-height: 2;
-  color: #000000;
+  color: #aaa;
   padding: 2rem 0;
 }
 
 .service {
-  display: -ms-block;
-  display: inline-block;
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
-  left: 10%;
 }
 
 .service .box {
   text-align: center;
-  justify-content: center;
   padding: 2rem;
 }
 
@@ -239,8 +220,8 @@ section {
   width: 7rem;
   line-height: 7rem;
   font-size: 2.5rem;
-  color: #00c02a;
-  background: #fffffe;
+  color: #000;
+  background: #fff200;
   margin-bottom: 1rem;
   border-radius: 50%;
 }
@@ -258,7 +239,7 @@ section {
   color: #aaa;
 }
 
-.Bimbingan .box-container {
+.menu .box-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
@@ -266,44 +247,45 @@ section {
   gap: 2rem;
 }
 
-.Bimbingan .box-container .box {
+.menu .box-container .box {
   text-align: center;
-} 
+}
 
-.Bimbingan .box-container .box:hover img {
+.menu .box-container .box:hover img {
   -webkit-transform: translateY(1rem);
           transform: translateY(1rem);
 }
 
-.img-foto{
-  width: 100%;
-  max-width: 900px;
-  height: 500;
-  left: 20px;
-  left: 4rem
+.menu .box-container .box img {
+  height: 25rem;
 }
 
-
-.Bimbingan .box-container .box .content {
+.menu .box-container .box .content {
   padding: 1rem 0;
 }
 
-.point {
-  font-size: 10pt;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu .box-container .box .content .stars {
+  margin-bottom: 2rem;
 }
 
-.point {
-  font-size: 10pt;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu .box-container .box .content .stars i {
+  font-size: 1.7rem;
+  color: #fff200;
 }
 
-.Bimbingan {
+.menu .box-container .box .content h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.menu .box-container .box .content .price {
+  font-size: 2rem;
+  line-height: 2;
+  color: #aaa;
+}
+
+.about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,44 +295,38 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 3rem;
-  justify-content: center;
 }
-  
-.Bimbingan .image {
+
+.about .image {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
-          right: 100%;
-          justify-content: center;
-          align-items: center;
-        
-} 
-.Bimbingan .image img {
+}
+
+.about .image img {
   width: 100%;
-  right: 100%;
-  justify-content: center;
 }
 
-.Bimbingan .content {
+.about .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
 }
 
-.Bimbingan .content .title {
+.about .content .title {
   font-size: 2.5rem;
   text-transform: uppercase;
   color: #fff;
 }
 
-.Bimbingan .content p {
+.about .content p {
   font-size: 1.5rem;
   line-height: 2;
   color: #aaa;
   padding: 2rem 0;
 }
 
-.Bimbingan .content .icons {
+.about .content .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,7 +337,7 @@ section {
   margin-top: 1rem;
 }
 
-.Bimbingan .content .icons h3 {
+.about .content .icons h3 {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 16rem;
           flex: 1 1 16rem;
@@ -370,49 +346,51 @@ section {
   color: #fff;
 }
 
-.Bimbingan .content .icons h3 i {
+.about .content .icons h3 i {
   padding-right: .5rem;
   color: #fff200;
 }
 
-.Konseling .box-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+.reviews .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
   gap: 2rem;
-  margin-bottom: 3rem;
-  justify-content: center;
-  align-items: center;
-}  
+}
 
-.Konseling .box-container .box {
+.reviews .box-container .box {
   text-align: center;
   padding: 2rem;
-  display: block;
 }
 
-.Konseling .box-container .box img {
-  display: inline-block;
-  height: 30%;
-  width: 60%;
+.reviews .box-container .box img {
+  height: 10rem;
+  width: 10rem;
   border-radius: 50%;
   margin-bottom: 1rem;
-  left: 20px;
 }
 
-.Konseling .box-container .box h3 {
+.reviews .box-container .box h3 {
   font-size: 2rem;
   text-transform: uppercase;
   color: #fff;
 }
 
-.Konseling .box-container .box p {
+.reviews .box-container .box p {
   font-size: 1.4rem;
   line-height: 2;
-  color: #ffffff;
+  color: #aaa;
   padding: 1rem 0;
+}
+
+.reviews .box-container .box .stars {
+  padding-top: .5rem;
+}
+
+.reviews .box-container .box .stars i {
+  font-size: 1.7rem;
+  color: #fff200;
 }
 
 .contact .row {
@@ -592,7 +570,7 @@ section {
 
 .footer {
   text-align: center;
-  background: webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
   background: linear-gradient(transparent, #000);
 }
 
